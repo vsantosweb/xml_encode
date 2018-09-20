@@ -1,11 +1,4 @@
 <?php
-$data = array(
-    'nome' => 'Vitor',
-    'caracteristica' => array(
-        'idade' => 22,
-        'sexo' => 'masculino',
-    )
-);
 
 function xml_encode($data, &$xml){
 
@@ -21,9 +14,3 @@ function xml_encode($data, &$xml){
         }
     }
 }
-
-
-$xml = new SimpleXMLElement('<?xml version="1.0"?><data></data>');
-xml_encode($data, $xml);
-
-$xml->asXML('name.xml');
